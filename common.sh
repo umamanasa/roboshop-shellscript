@@ -47,7 +47,7 @@ func_systemd(){
 }
 
 func_schema_setup(){
-  if ["${schema_type}" == "mongodb"]; then
+  if [ "${schema_type}" == "mongodb" ]; then
   echo -e "\e[36m>>>>>> Install Mongo Client <<<<<\e[0m"
     yum install mongodb-org-shell -y &>>${log}
     func_exit_status
@@ -56,7 +56,7 @@ func_schema_setup(){
     mongo --host mongodb.manasareddy.online </app/schema/${component}.js &>>${log}
     func_exit_status
     fi
-    if ["${schema_type}" == "mysql"]; then
+    if [ "${schema_type}" == "mysql" ]; then
     echo -e "\e[36m>>>>>> Install MYSQL Client <<<<<\e[0m"
       yum install mysql -y &>>${log}
       func_exit_status
