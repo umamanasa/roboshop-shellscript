@@ -95,11 +95,8 @@ func_nodejs(){
 }
 
 func_java(){
-  echo -e "\e[36m>>>>>> Create ${component} service <<<<<\e[0m"
-  cp ${component}.service /etc/systemd/system/${component}.service &>>${log}
-  func_exit_status
 
-  echo -e "\e[36m>>>>>> install maven <<<<<\e[0m"
+    echo -e "\e[36m>>>>>> install maven <<<<<\e[0m"
   yum install maven -y &>>${log}
   func_exit_status
 
