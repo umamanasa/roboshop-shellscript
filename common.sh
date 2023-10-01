@@ -1,3 +1,4 @@
+
 log=/tmp/roboshop.log
 
 func_exit_status(){
